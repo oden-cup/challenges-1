@@ -4,23 +4,21 @@
   box-sizing: border-box;
 }
 
-
 .clearfix::after {
   content: "";
-  display: inline-block;
+  display: block;
   clear: both;
 }
 
 main{
   width: 960px;
   margin: 50px auto;
-  position: relative;
 }
 
 .step-box{
   float: left;
-  width: 300px;
-  margin: 50px 30px 50px 0;
+  width: 31.2%;
+  margin-right: 30px;
   padding: 10px;
   position: relative;
   border: 1px solid #eee;
@@ -65,8 +63,22 @@ main{
 }
 
 @media screen and (max-width: 768px) {
-	.step-box {
-		max-width: 100%;
-		float: none;
-	}
+  main {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .step-box {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+  .step-box:first-child {
+    margin-top: 50px;
+  }
+  .step-box:nth-child(2) {
+    margin: 20px 0;
+  }
+  .step-box:last-child {
+    margin-bottom: 50px;
+  }
 }
